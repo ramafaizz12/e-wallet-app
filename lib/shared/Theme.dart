@@ -9,4 +9,5 @@ Color fontcolor = const Color(0xff14193F);
 Color fontcolorgrey = const Color(0xffa4a8ae);
 Color bluecolor = const Color(0xff5142E6);
 Color birumuda = const Color(0xff53C1F9);
+Color green = const Color(0xff22B07D);
 final TextStyle textpoppins = GoogleFonts.poppins();
