@@ -25,7 +25,7 @@ class Buttonutama extends StatelessWidget {
         ),
         child: Center(
             child: Text(
-          "$nama",
+          nama,
           style: textpoppins.copyWith(
               color: whitecolor, fontWeight: FontWeight.bold),
         )),

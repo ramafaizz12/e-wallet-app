@@ -20,7 +20,7 @@ class _BottomnavbarState extends State<Bottomnavbar> {
           height: 70,
           decoration: BoxDecoration(
               color: whitecolor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(20), topRight: Radius.circular(20))),
           child: BottomNavigationBar(
             selectedIconTheme: IconThemeData(color: birumuda),

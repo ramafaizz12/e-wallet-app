@@ -50,10 +50,10 @@ class SignupPage extends StatelessWidget {
                                 Container(
                                   width: p1.maxWidth * 0.32,
                                   height: p1.maxHeight * 0.2,
-                                  child: Image.asset('assets/upload.png'),
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       color: backgroudcolor),
+                                  child: Image.asset('assets/upload.png'),
                                 ),
                                 Text(
                                   "Passport/ID Card",
@@ -127,7 +127,7 @@ class SignupPage extends StatelessWidget {
                                   builder: (context) => const HomePage(),
                                 ));
                           },
-                          child: Text("Skip for Now")))
+                          child: const Text("Skip for Now")))
                   // Center(
                   //     child:
                   //         TextButton(onPressed: () {}, child: Text("Sign In")))

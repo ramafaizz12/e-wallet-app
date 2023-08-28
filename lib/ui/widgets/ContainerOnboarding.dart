@@ -15,7 +15,7 @@ class ContainerOnBorading extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width,
-      margin: EdgeInsets.only(top: 0.04),
+      margin: const EdgeInsets.only(top: 0.04),
       height: height,
       decoration: BoxDecoration(
           color: whitecolor, borderRadius: BorderRadius.circular(15)),
@@ -69,7 +69,7 @@ class ContainerOnBorading extends StatelessWidget {
                                     ));
                               },
                             ),
-                            TextButton(onPressed: () {}, child: Text("Sign In"))
+                            TextButton(onPressed: () {}, child: const Text("Sign In"))
                           ],
                         )
                       : Row(

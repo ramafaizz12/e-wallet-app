@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:ewalletapp/ui/pages/pages.dart';
+import 'package:ewalletapp/ui/widgets/Hero_Dialog_Route.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -7,6 +8,7 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import '../../bloc/CounterBloc/counter_bloc.dart';
 import '../../shared/Theme.dart';
+import 'Custom_rect_tween.dart';
 part 'Containerkecil.dart';
 part 'Buttonutama.dart';
 part 'ContainerProgress.dart';

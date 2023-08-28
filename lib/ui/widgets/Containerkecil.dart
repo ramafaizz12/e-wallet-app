@@ -3,7 +3,7 @@ part of 'widgets.dart';
 class Containerkecil extends StatelessWidget {
   final Color warna;
 
-  Containerkecil({super.key, this.warna = Colors.grey});
+  const Containerkecil({super.key, this.warna = Colors.grey});
 
   @override
   Widget build(BuildContext context) {

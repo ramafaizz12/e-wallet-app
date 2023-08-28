@@ -23,7 +23,7 @@ class TextInput extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "$nama",
+            nama,
             style: textpoppins.copyWith(
                 color: darkpurplecolor, fontWeight: FontWeight.w500),
           ),
@@ -36,7 +36,7 @@ class TextInput extends StatelessWidget {
             child: TextField(
               obscureText: obscure,
               controller: textcontrol,
-              decoration: InputDecoration(border: InputBorder.none),
+              decoration: const InputDecoration(border: InputBorder.none),
             ),
           )
         ],

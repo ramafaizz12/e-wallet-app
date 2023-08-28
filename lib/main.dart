@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           create: (context) => CounterBloc(),
         ),
       ],
-      child: const MaterialApp(
+      child: const MaterialApp( 
         debugShowCheckedModeBanner: false,
         home: SplashScreen(),
       ),

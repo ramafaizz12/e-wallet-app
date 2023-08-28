@@ -20,7 +20,7 @@ class Containercard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(17),
                   child: Image.asset('assets/lingkaran.png'))),
           Padding(
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -31,7 +31,7 @@ class Containercard extends StatelessWidget {
                       fontWeight: FontWeight.w300,
                       fontSize: 21),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Text(
@@ -41,7 +41,7 @@ class Containercard extends StatelessWidget {
                       fontWeight: FontWeight.w300,
                       fontSize: 25),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 13,
                 ),
                 Text(
@@ -51,7 +51,7 @@ class Containercard extends StatelessWidget {
                       fontWeight: FontWeight.w100,
                       fontSize: 17),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 2,
                 ),
                 Text(
