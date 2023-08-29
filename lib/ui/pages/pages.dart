@@ -1,4 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:ewalletapp/ui/widgets/Friendly_Tips.dart';
+import 'package:ewalletapp/ui/widgets/History_Transaction.dart';
+import 'package:ewalletapp/ui/widgets/Latest_Transaction.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
