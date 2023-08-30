@@ -31,8 +31,12 @@ class _HomePageState extends State<HomePage> {
                 });
               },
               children: [
+                const Overviewpage(),
                 Templatepage(
-                  haldata: const Overviewpage(),
+                  backbutton: false,
+                  header: 'History',
+                  sliderbutton: true,
+                  haldata: const HistoryPage(),
                 )
               ],
             ),
