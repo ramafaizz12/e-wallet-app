@@ -11,7 +11,7 @@ import '../../shared/Theme.dart';
 import 'Custom_rect_tween.dart';
 part 'Containerkecil.dart';
 part 'Buttonutama.dart';
-part 'Latest_Transaction.dart';
+part 'Latest_Transaction_Overview.dart';
 part 'Latest_transaction_container.dart';
 part 'ContainerProgress.dart';
 part 'Textinput.dart';

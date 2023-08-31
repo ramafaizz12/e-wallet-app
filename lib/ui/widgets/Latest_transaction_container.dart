@@ -39,10 +39,26 @@ class LatestTransactionBox extends StatelessWidget {
           flex: 1,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text(transaction), Text(date)],
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                transaction,
+                style: textpoppins.copyWith(fontWeight: FontWeight.bold),
+              ),
+              Text(
+                date,
+                style: textpoppins.copyWith(
+                    fontWeight: FontWeight.w200, color: fontcolorgrey),
+              )
+            ],
           ),
         ),
-        Flexible(flex: 1, child: Text(price))
+        Flexible(
+            flex: 1,
+            child: Text(
+              price,
+              style: textpoppins.copyWith(fontWeight: FontWeight.bold),
+            ))
       ],
     );
   }

@@ -18,7 +18,7 @@ class Templatepage extends StatelessWidget {
       body: LayoutBuilder(
           builder: (p0, p1) => SafeArea(
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10, top: 7),
+                  padding: const EdgeInsets.only(left: 20, right: 20, top: 7),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -47,7 +47,7 @@ class Templatepage extends StatelessWidget {
                                   flex: 1,
                                   child: Image.asset(
                                     'assets/sliders.png',
-                                    scale: 2.7,
+                                    scale: 3,
                                   ))
                               : emptyBox()
                         ],
