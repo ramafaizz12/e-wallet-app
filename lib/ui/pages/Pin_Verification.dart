@@ -1,11 +1,18 @@
 part of 'pages.dart';
 
-class Pinverification extends StatelessWidget {
+class Pinverification extends StatefulWidget {
   const Pinverification({super.key});
 
   @override
+  State<Pinverification> createState() => _PinverificationState();
+}
+
+TextEditingController one = TextEditingController();
+
+class _PinverificationState extends State<Pinverification> {
+  List<TextEditingController?> controllerr = [one];
+  @override
   Widget build(BuildContext context) {
-    List<TextEditingController> controller;
     return SafeArea(
       child: Scaffold(
         backgroundColor: darkpurplecolor,
@@ -32,7 +39,9 @@ class Pinverification extends StatelessWidget {
                   obscureText: false,
                   autoFocus: true,
                   numberOfFields: 6,
-
+                  handleControllers: (controllers) {
+                    print(controllers.first);
+                  },
                   textStyle: textpoppins.copyWith(
                       fontWeight: FontWeight.bold, color: whitecolor),
                   borderColor: fontcolorgrey,
@@ -57,6 +66,7 @@ class Pinverification extends StatelessWidget {
                 SizedBox(
                   height: p1.maxHeight * 0.1,
                 ),
+                Text(one.text),
                 SizedBox(
                     width: p1.maxWidth,
                     height: p1.maxHeight * 0.5,
