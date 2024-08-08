@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:otp_text_field/otp_field.dart';
+import 'package:otp_text_field/style.dart';
 
 import '../../bloc/CounterBloc/counter_bloc.dart';
 import '../../shared/Theme.dart';

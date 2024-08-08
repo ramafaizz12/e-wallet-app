@@ -10,11 +10,14 @@ class Pinverification extends StatefulWidget {
 TextEditingController one = TextEditingController();
 
 class _PinverificationState extends State<Pinverification> {
-  List<TextEditingController?> controllerr = [one];
+  OtpFieldController controller = OtpFieldController();
+  int angkaa = 0;
+  List<String> angka = ['0', '1', '2', '3'];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: darkpurplecolor,
         body: LayoutBuilder(
           builder: (context, p1) => Padding(
@@ -35,33 +38,17 @@ class _PinverificationState extends State<Pinverification> {
                 SizedBox(
                   height: p1.maxHeight * 0.06,
                 ),
-                OtpTextField(
-                  obscureText: false,
-                  autoFocus: true,
-                  numberOfFields: 6,
-                  handleControllers: (controllers) {
-                    print(controllers.first);
+                OTPTextField(
+                  length: 4,
+                  controller: controller,
+                  width: p1.maxWidth * 0.5,
+                  fieldWidth: 30,
+                  style: TextStyle(fontSize: 17),
+                  textFieldAlignment: MainAxisAlignment.spaceAround,
+                  fieldStyle: FieldStyle.underline,
+                  onCompleted: (pin) {
+                    print("Completed: " + pin);
                   },
-                  textStyle: textpoppins.copyWith(
-                      fontWeight: FontWeight.bold, color: whitecolor),
-                  borderColor: fontcolorgrey,
-                  //set to true to show as box or false to show as dash
-                  showFieldAsBox: false,
-                  //runs when a code is typed in
-                  onCodeChanged: (String code) {
-                    //handle validation or checks here
-                  },
-                  //runs when every textfield is filled
-                  onSubmit: (String verificationCode) {
-                    showDialog(
-                        context: context,
-                        builder: (context) {
-                          return AlertDialog(
-                            title: Text("Verification Code"),
-                            content: Text('Code entered is $verificationCode'),
-                          );
-                        });
-                  }, // end onSubmit
                 ),
                 SizedBox(
                   height: p1.maxHeight * 0.1,
@@ -71,7 +58,7 @@ class _PinverificationState extends State<Pinverification> {
                     width: p1.maxWidth,
                     height: p1.maxHeight * 0.5,
                     child: GridView.builder(
-                        itemCount: 11,
+                        itemCount: angka.length,
                         scrollDirection: Axis.horizontal,
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
@@ -79,7 +66,16 @@ class _PinverificationState extends State<Pinverification> {
                                 crossAxisSpacing: 20.0,
                                 crossAxisCount: 4,
                                 childAspectRatio: (7 / 8)),
-                        itemBuilder: (context, index) => containerangka()))
+                        itemBuilder: (context, index) => containerangka(
+                              angka: index.toString(),
+                              fungsi: () {
+                                // controller.setFocus(index + 1);
+                                controller.setValue(index.toString(), angkaa);
+                                setState(() {
+                                  angkaa++;
+                                });
+                              },
+                            )))
               ],
             ),
           ),
@@ -88,12 +84,13 @@ class _PinverificationState extends State<Pinverification> {
     );
   }
 
-  Widget containerangka() {
+  Widget containerangka(
+      {required String angka, required void Function()? fungsi}) {
     return FloatingActionButton(
+      onPressed: fungsi,
       backgroundColor: whitecolor.withOpacity(0.05),
-      onPressed: () {},
       child: Text(
-        "1",
+        angka,
         style: textpoppins.copyWith(fontWeight: FontWeight.bold, fontSize: 12),
       ),
     );
